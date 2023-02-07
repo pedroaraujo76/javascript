@@ -1,0 +1,45 @@
+body {
+    font: normal 15pt arial;
+}
+
+.animated-background {
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045 );
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
+}
+
+@keyframes animated-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+header {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+section {
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.356);
+}
+
+input#ano {
+    width: 150px;
+}
+
+footer {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+}

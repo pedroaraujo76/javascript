@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.473);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+        <h1 class="teste"><strong>Testando</strong></h1>
+        <h1 class="teste">Testando outra vez</h1>
+
+        <p id="paragrafo">Isso é um parágrafo</p>
+        <p name="nome">Isso é um nome</p>
+        
+        <script>
+            var l = window.document.getElementsByClassName('teste')[0]
+            l.innerHTML = 'Mudando o primeiro h1'
+            l.style.background = 'blue'
+
+            var l2 = window.document.getElementsByClassName('teste') [1]
+            l2.innerHTML = 'Mudando o segundo h1'
+            l2.style.color = 'red'
+
+            var l3 = window.document.getElementById('paragrafo')
+            l3.innerHTML = 'Mudando o primeiro paragráfo'
+            l3.style.fontSize = '20px'
+            
+            var l4 = window.document.getElementsByName('nome') [0]
+            l4.innerHTML = 'Mudando o quinto paragráfo com o name'
+            l4.style.letterSpacing = '10px'
+        </script>
+</body>
+</html>

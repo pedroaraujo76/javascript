@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiros</title>
+</head>
+<body>
+        <h1>Contando estrangeiros</h1>
+        Onde você nasceu? <input type="text" id="pais">
+        <input type="button" value="Enviar" id="enviar">
+        <div id="res"></div>
+
+        <script>
+            var a = document.getElementById('enviar');
+            a.addEventListener('click', clicar);
+
+            function clicar () {
+                var p = document.getElementById('pais');
+                var res = document.getElementById('res');
+
+                if (p.value == 'Brasil') {
+                    res.innerHTML = `Você é Brasileiro!`
+                } else {
+                    res.innerHTML = `Você é Estrangeiro!`
+                }
+            }
+        </script>
+</body>
+</html>

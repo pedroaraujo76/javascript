@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando em javascript</title>
+    <style>
+        input {
+            border-radius: 20px;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="numero1" id="numero1">
+    <input type="number" name="numero2" id="numero2">
+    <input type="button" value="Somar" id="soma">
+    <div id="res">A soma do cálculo aparecerá aqui:</div>
+
+    <script>
+        var a = document.getElementById('soma');
+        a.addEventListener('click', clicar);
+
+        function clicar () {
+            var b = document.getElementById('numero1');
+            var c = document.getElementById('numero2');
+            var resposta = document.getElementById('res');
+            var n1 = Number(b.value);
+            var n2 = Number(c.value);
+            var s = n1 + n2;
+
+            resposta.innerHTML = `A soma dos números ${n1} e ${n2} é igual a: ${s}`
+        }
+    </script>
+</body>
+</html>
